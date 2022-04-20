@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>账户信息</legend>
+        <form>
+            <table align="center" border="2">
+                <tr>
+                    <td width="100px"><label for="name">*用户名：</label></td>
+                    <td><input type="text" placeholder="用户名设置成功后不可修改">
+                        <font size="0.1" color="red">6-30位字母、数字或“_”,字母开头
+                        </font>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td width="100px"><label for="xb">*性别：</label></td>
+                    <td><input type="radio" name="xb">男 <input type="radio" name="xb">女</td>
+
+                </tr>
+                <tr>
+                    <td width="100px"><label for="password">*登陆密码：</label></td>
+                    <td><input type="text" name="" id="password" placeholder="6-20位字母、数字或符号"><img src="../pic/4.png"
+                            width="150" align="center" title="请输入密码！"></td>
+                </tr>
+                <tr>
+                    <td width="100px"><label for="password">*确认密码：</label></td>
+                    <td><input type="text" name="" id="password1" placeholder="再次输入您的密码"></td>
+                </tr>
+                <tr>
+                    <td width="100px"><label for="zjlx">*证件类型：</label></td>
+                    <td><select name="a[]" id="sfz">
+                            <option value="1">中国居民身份证</option>
+                            <option value="2">港澳台居民居住证</option>
+                            <option value="3">港澳居民来往内地通行证</option>
+                            <option value="4">台湾居民来往大陆通行证</option>
+                            <option value="5">护照</option>
+                            <option value="6">外国人永久居留身份证</option>
+                        </select></td>
+                <tr>
+                    <td width="100px"><label for="xqah">*兴趣爱好：</label></td>
+                    <td> <input type="checkbox" name="sport[]" id="football" value="1">
+                        <label for="football">足球</label>
+                        <input type="checkbox" name="sport[]" id="basktetball" value="2">
+                        <label for="basktetball">篮球</label>
+                        <input type="checkbox" name="sport[]" id="swiming" value="3">
+                        <label for="swiming">游泳</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100px"><label for="name1">*姓名：</label></td>
+                    <td><input type="text" placeholder="请输入姓名">
+                        <font size="0.1" color="red"><ins>姓名填写规则</ins> （用于身份核验，请正确填写）
+                        </font>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100px"><label for="zjhm">*证件号码：</label></td>
+                    <td><input type="text" placeholder="请输入您的证件号码">
+                        <font size="0.1" color="red">（用于身份核验，请正确填写）
+                        </font>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100px"><label for="lklx">*旅客类型：</label></td>
+                    <td><select name="b[]" id="lxlx">
+                            <option value="">成人</option>
+                            <option value="">儿童</option>
+                            <option value="">学生</option>
+                            <option value="">残疾军人、伤残人民警察</option>
+                        </select></td>
+                <tr>
+                    <td width="100px"><label for="grjj">*个人简介：</label></td>
+                    <td><textarea name="message" id="" cols="21" rows="5" placeholder="输入信息"></textarea></td>
+                </tr>
+                </tr>
+
+                <tr>
+                    <td width="100px"><label for="email">*邮箱：</label></td>
+                    <td><input type="email" placeholder="请正确填写邮箱地址"></td>
+                </tr>
+
+
+                <tr>
+                    <td width="100"><label for="phone">*手机号码：</label></td>
+                    <td><input type="tel" name="" id="phone" placeholder="请输入您的手机号码">
+                        <font size="0.01" color="red">正确填写手机号码，向该手机号码发送短信验证码</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><input type="checkbox" name="" id="fxk"></td>
+                    <td width="450px"><label for="wb">我已阅读并同意遵守<a href="https://kyfw.12306.cn/otn/regist/rule"
+                                target="_blank" </a>《中国铁路客户服务条款》<a
+                                    href="https://kyfw.12306.cn/otn/gonggao/privacyPolicy_web.html" target="_blank"
+                                    </a>《隐私权政策》</label></td>
+                </tr>
+
+
+            </table>
+            <table align="center">
+                <tr>
+                    <td> <input type="submit" id="tj" value="提交"></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+
+</html>

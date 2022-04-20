@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ul为无序列表，内容写在li里，写几个li就有几个列表项，li为块标签 -->
+    <ul>
+        <li>
+            123
+        </li>
+        <li>
+            456
+        </li>
+        <li>
+            789
+        </li>
+
+        <ul>
+            <li>
+                000
+            </li>
+            <ul>
+                <li>
+                    aaa
+                </li>
+            </ul>
+            <li>
+                000
+            </li>
+            <ul>
+                <li>
+                    bbb
+                </li>
+            </ul>
+            <li>
+                000
+            </li>
+            <ul>
+                <li>
+                    ccc
+                </li>
+            </ul>
+        </ul>
+    </ul>
+
+    <!-- ol为有序列表，内容写在li里，写几个li就有几个列表项，li为块标签 -->
+    <!-- 有序列表可以嵌套无序列表，无序列表也可以嵌套有序列表 -->
+    <ol>
+        <li>
+            123
+        </li>
+        <li>
+            456
+        </li>
+        <li>
+            789
+        </li>
+
+        <ul>
+            <li>
+                000
+            </li>
+            <li>
+                000
+            </li>
+            <li>
+                000
+            </li>
+        </ul>
+
+    </ol>
+
+    <dl>
+        <dt>
+            衣服
+        </dt>
+        <dd>
+            毛衣
+        </dd>
+        <dd>
+            夹克
+        </dd>
+        <dt>
+            鞋子
+        </dt>
+        <dd>
+            皮鞋
+        </dd>
+        <dd>
+            运动鞋
+        </dd>
+    </dl>
+    <!-- dt表示为一级分类，dd表示为dt分类下的分类，注意dd标签不需要嵌套，直接紧跟着后面写 -->
+    <ul>
+        <li>
+            衣服
+            <ul>
+                <li>毛衣</li>
+                <li>夹克</li>
+            </ul>
+        </li>
+        <li>
+            鞋子
+            <ul>
+                <li>皮鞋</li>
+                <li>运动鞋</li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul type="disc">
+        <li>111</li>
+        <li>222</li>
+    </ul>
+    <!-- 默认值,实心圆 -->
+
+    <ul type="circle">
+        <li>111</li>
+        <li>222</li>
+    </ul>
+    <!-- 空心圆 -->
+
+    <ul type="square">
+        <li>111</li>
+        <li>222</li>
+    </ul>
+    <!-- 正方形 -->
+
+    <ul type="none">
+        <li>111</li>
+        <li>222</li>
+    </ul>
+    <!-- 没有图形 -->
+    <ol type="i">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    <!-- 使用有序列表自动排序 -->
+</body>
+
+</html>

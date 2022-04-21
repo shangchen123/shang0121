@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&lt;details&gt;：详细信息展现元素</title>
+    <style type="text/css">
+        span {
+
+            display: -moz-inline-box;
+            display: inline-block;
+            width: 200px;
+        }
+    </style>
+    <style>
+        div {
+            width: 600px;
+            height: 100px;
+
+            border: 1px solid black;
+        }
+    </style>
+
+    <style>
+        #dd {
+            width: 600px;
+            height: 200px;
+
+            border: 1px solid black;
+        }
+    </style>
+    <style>
+        #ddd {
+            width: 1100px;
+            height: 100px;
+
+            border: 1px solid black;
+        }
+    </style>
+
+
+    <style>
+        details {
+            font: 16px "Open Sans", "Arial", sans-serif;
+            width: 620px;
+        }
+
+        details>summary {
+
+            padding: 2px 6px;
+            width: 15em;
+            background-color: #ddd;
+            border: none;
+            box-shadow: 3px 3px 4px black;
+        }
+
+
+        details>#ppp {
+
+            border-radius: 0 0 10px 10px;
+            background-color: #ddd;
+            padding: 2px 6px;
+            margin: 0;
+            box-shadow: 3px 3px 4px black;
+        }
+
+
+
+        details #d1 {
+            font: 16px "Open Sans", "Arial", sans-serif;
+            width: 620px;
+        }
+
+        details>#s1 {
+            padding: 2px 6px;
+            width: 15em;
+            background-color: #ddd;
+            border: none;
+            box-shadow: 3px 3px 4px black;
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details>#p1 {
+            border-radius: 0 0 10px 10px;
+            background-color: #ddd;
+            padding: 2px 6px;
+            margin: 0;
+            box-shadow: 3px 3px 4px black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>&lt;details&gt;：详细信息展现元素</h1>
+    <h2>
+        Try it
+    </h2>
+    <p><b>HTML</b>&lt;details&gt;<b>元素</b>可创建一个挂件，仅在被切换成展开状态时，它才会显示内含的信息。&lt;summary&gt; 元素可为该部件提供概要或者标签。</p>
+    <p>A disclosure widget is typically presented onscreen using a small triangle which rotates (or twists) to indicate
+        open/closed status, with a label next to the triangle. If the first child of the &lt;details&gt; element is a
+        &lt;summary&gt;, the contents of the &lt;summary&gt; element are used as the label for the disclosure widget.
+    </p>
+    <hr>
+    <table>
+        <tr>
+            <td>
+                &LT;HTML&GT;
+            </td>
+            <td>
+                &LT;CSS&GT;
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <ol type="1">
+
+        <li>&lt;details&gt;</li>
+        <li> &lt;summary&gt;Details&lt;/summary&gt;</li>
+        <li> Something small enough to escape casual notice.</li>
+        <li> &lt;/details&gt;</li>
+    </ol>
+
+    <p>
+        <b>Note:</b>The common use of a triangle which rotates or twists around to represent opening or closing the
+        widget is why these are sometimes called "twisties."
+    </p>
+    <p>
+        同一个 &lt;details&gt; 组件只能处于两种状态之一。The default closed state displays only the triangle and the label inside
+        &lt;summary&gt; (or a user agent-defined default string if no &lt;summary&gt;). This might look like the
+        following:
+    </p>
+
+    <div id="ddd" align="center">
+        <img src="https://mdn.mozillademos.org/files/15717/details-closed.png">
+    </div>
+    <p>
+        Here we see a standard disclosure widget with the label "System Requirements", in its default closed state. When
+        the user clicks on the widget, or focuses it then presses the space bar, it "twists" open, revealing its
+        contents:
+
+
+    </p>
+    <div id="ddd" align="center">
+        <img src="https://mdn.mozillademos.org/files/15718/details-open.png">
+    </div>
+    <p>
+        From there, you can use CSS to style the disclosure widget, and you can programmatically open and close the
+        widget by setting/removing its open attribute.
+    </p>
+    <p>
+        By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When
+        open, it expands to display the details contained within.
+    </p>
+
+    <table border="2" style="border-collapse: collapse;">
+        <tr>
+            <td>
+                <b> Note: </b>Unfortunately, at this time there's no built-in way to animate the transition between open
+                and closed.
+            </td>
+        </tr>
+    </table>
+    <p>
+        Fully standards-compliant implementations automatically apply the CSS <a href=""><small>display</small></a> :
+        list-item to the<a href=""><small>&lt;summary&gt;</small></a> element. You can use this to customize its
+        appearance further. See <a href="">Customizing the disclosure widget</a> Customizing the disclosure widget for
+        further details.
+    </p>
+
+    <span> <a href="">Content categories</a></span>
+
+    <a href=>Flow content</a> sectioning root, interactive content, palpable content.
+    <hr>
+    <span> permitted content</span>
+
+    One <a href="">&lt;summary&gt;</a>element followed by <a href>flow content</a>
+    <hr>
+
+    <span> Tag omission</span>
+
+    不允许,开始标签和结束标签都不能省略。
+    <hr>
+    <span> Permitted parents</span>
+
+    Any element that accepts <a href>flow content</a>.
+
+    <hr>
+
+    <span> Permitted ARIA roles</span>
+
+    None
+
+    <hr>
+    <span> DOM interface</span>
+
+    <a href>HTMLDetailsElement</a>
+    <hr>
+
+
+    <h2>
+        属性
+    </h2>
+    <p>
+        此元素仅包含<a href>全局属性</a>
+    </p>
+    <h4>open</h4>
+    <p>This Boolean attribute indicates whether or not the details — that is, the contents of the &lt;details&gt;
+        element — are currently visible. The default, false, means the details are not visible.</p>
+
+
+    <h2>实践</h2>
+    <p>In addition to the usual events supported by HTML elements, the &lt;details&gt; element supports the toggle
+        event, which is dispatched to the &lt;details&gt; element whenever its state changes between open and closed. It
+        is sent after the state is changed, although if the state changes multiple times before the browser can dispatch
+        the event, the events are coalesced so that only one is sent.</p>
+    <p>
+        You can listen for the toggle event to detect when the widget changes state:
+    </p>
+    <pre>
+        details.addEventListener("toggle", event =&gt; {
+        if (details.open) {
+          /* the element was toggled open */
+        } else {
+          /* the element was toggled closed */
+        }
+      });</pre>
+
+    <h2>
+        例子
+    </h2>
+    <h2>
+        A simple disclosure example
+    </h2>
+    <p>This example shows a &lt;details&gt; element with no provided summary.</p>
+    <pre>
+    &lt;details&gt;
+        &lt;p&gt;Requires a computer running an operating system. The computer
+        must have some memory and ideally some kind of long-term storage.
+        An input device as well as some form of output device is
+        recommended.&lt;/p&gt;
+    &lt;/details&gt;
+    </pre>
+    <p>
+        In this situation, the browser will use a default summary string (usually "Details"). Here's what your browser
+        does with it:
+    </p>
+
+    <div>
+        <details>
+            <tr>
+                <p>Requires a computer running an operating system. The computer
+                    must have some memory and ideally some kind of long-term storage.
+                    An input device as well as some form of output device is
+                    recommended.</p>
+        </details>
+    </div>
+
+    <h2>
+        Customizing the appearance
+    </h2>
+
+    <p>
+        Now let's apply some CSS to customize the appearance of the disclosure box.
+    </p>
+    <h2>
+        CSS
+    </h2>
+    <pre>
+    details {
+        font: 16px "Open Sans", "Arial", sans-serif;
+        width: 620px;
+      }
+      
+      details > summary {
+        padding: 2px 6px;
+        width: 15em;
+        background-color: #ddd;
+        border: none;
+        box-shadow: 3px 3px 4px black;
+      }
+      
+      details > p {
+        border-radius: 0 0 10px 10px;
+        background-color: #ddd;
+        padding: 2px 6px;
+        margin: 0;
+        box-shadow: 3px 3px 4px black;
+      }
+</pre>
+
+    <p>
+        This CSS creates a look similar to a tabbed interface, where clicking the tab opens it to reveal its contents.
+    </p>
+    <h2>
+        HTML
+    </h2>
+    <pre>
+&lt;details&gt;
+    &lt;summary&gt;System Requirements&lt;/summary&gt;
+    &lt;p&gt;Requires a computer running an operating system. The computer
+    must have some memory and ideally some kind of long-term storage.
+    An input device as well as some form of output device is
+    recommended.&lt;/p&gt;
+&lt;/details&gt;
+</pre>
+    <h2>
+        结果
+    </h2>
+    <div>
+
+        <details>
+            <summary>System Requirements</summary>
+            <p id="ppp">Requires a computer running an operating system. The computer
+                must have some memory and ideally some kind of long-term storage.
+                An input device as well as some form of output device is
+                recommended.</p>
+        </details>
+    </div>
+
+    <h2>
+        自定义自带部件的样式
+    </h2>
+    <p>
+        自带的三角形可以自定义，但并没有得到广泛支持。由于该元素是标准化的，因此在实验性实施阶段，浏览器如何支持此自定义项有所不同，我们不得不暂时使用多种方法。
+    </p>
+    <p>
+        &lt;summary&gt; 元素支持
+        list-style缩写属性或者完全属性，比如list-style-type，可以使用它们任意改变三角（通常是使用list-style-image）。例如，我们可以使用list-style: none移除三角形
+    </p>
+    <p>Chrome 尚不支持此功能，因此我们还需要使用其非标准::-webkit-details-marker伪元素来自定义。</p>
+
+    <h2>
+        <pre>CSS</pre>
+    </h2>
+    <PRE>
+    details {
+        font: 16px "Open Sans", "Arial", sans-serif;
+        width: 620px;
+      }
+      
+      details &gt; summary {
+        padding: 2px 6px;
+        width: 15em;
+        background-color: #ddd;
+        border: none;
+        box-shadow: 3px 3px 4px black;
+        list-style: none;
+      }
+      
+      details &gt; summary::-webkit-details-marker {
+        display: none;
+      }
+      
+      details &gt; p {
+        border-radius: 0 0 10px 10px;
+        background-color: #ddd;
+        padding: 2px 6px;
+        margin: 0;
+        box-shadow: 3px 3px 4px black;
+      }
+  </PRE>
+    <p>
+        该 CSS 的外观类似于选项卡界面，在该界面中，激活选项卡将展开并打开它以显示其内容。
+    </p>
+    <h2>
+        HTML
+    </h2>
+    <pre>
+&lt;details&gt;
+    &lt;summary&gt;System Requirements&lt;/summary&gt;
+    &lt;p&gt;Requires a computer running an operating system. The computer
+    must have some memory and ideally some kind of long-term storage.
+    An input device as well as some form of output device is
+    recommended.&lt;/p&gt;
+&lt;/details&gt;
+  </pre>
+    <h2>
+        结果
+    </h2>
+    <div>
+    
+        <details id="d1">
+            <summary id="s1">System Requirements</summary>
+            <p id="p1">Requires a computer running an operating system. The computer
+                must have some memory and ideally some kind of long-term storage.
+                An input device as well as some form of output device is
+                recommended.</p>
+        </details>
+    
+</div>
+    <h2>
+        规范
+    </h2>
+    <table border="2" style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <td width="300">
+                    规范
+                </td>
+                <td width="200">
+                    状态
+                </td>
+                <td width="200">备注</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href> HTML Living Standard &lt;details&gt;</a>
+                </td>
+                <td>
+                    Living standard
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <a href>HTML&lt;details&gt;</a>
+                </td>
+                <td>
+                    Recommendation
+                </td>
+                <td>
+                    Initial definition
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>
+        浏览器兼容性
+    </h2>
+    <p>
+        <a href>Report problems with this compatibility data on GitHub</a>
+    </p>
+
+
+
+    <table border="2" style="border-collapse: collapse;">
+        <tbody>
+
+            <tr>
+                <td rowspan="2" height="200" width="100">1</td>
+                <td width="400" colspan="6">2</td>
+                <td width="400" colspan="6">2</td>
+            </tr>
+
+
+            <tr>
+                <td width="80">
+                    Chrom
+                </td>
+
+                <td width="80">
+                    Edge
+                </td>
+                <td width="80">
+                    Firfox
+                </td>
+                <td width="80">
+                    Internet Explorer
+                </td>
+                <td width="80">
+                    Opera
+                </td>
+                <td width="80">
+                    Safari
+                </td>
+                <td width="80">
+                    WebView Android
+                </td>
+                <td width="80">
+                    Chrome Android
+                </td>
+                <td width="80">
+                    Firefox for Android
+                </td>
+                <td width="80">
+                    Opera Android
+                </td width="80">
+                <td width="80">
+                    Safari on IOS
+                </td>
+                <td width="80">
+                    Samsung Internet
+                </td>
+
+
+
+            </tr>
+
+        </tbody>
+    </table>
+    <br>
+
+    <div id="dd">
+        <h3>Found a problem with this page?</h3>
+        <ul>
+            <li>
+                <a href>Edit on GitHub</a>
+            </li>
+            <li>
+                <a href>Source on GitHub</a>
+            </li>
+            <li>
+                <a href>Report a problem with this content on GitHub</a>
+            </li>
+            <li>
+                Want to fix the problem your self? See<a href>See our Contribution guide</a>.
+            </li>
+        </ul>
+        <P>
+            <strong>Last modified</strong>:2022年3月18日,<a href>by MDN contributors</a>
+        </P>
+    </div>
+</body>
+
+</html>
